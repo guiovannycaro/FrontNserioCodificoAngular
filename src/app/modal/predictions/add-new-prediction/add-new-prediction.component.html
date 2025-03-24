@@ -1,1 +1,180 @@
-<p>add-new-prediction works!</p>
+<form>
+
+    <div style="width: 80% !important;MARGIN: 0% 5% 0% 10%;">
+
+        <div class="row col-xs-12">
+            <div class="col">
+                <div style="width: 80%;height: 25px;float: left; margin: 0% 0% 0% 0% ;padding: 0% 0% 0% 0%;">
+                    <h1><b> customer AHPOP-New Order</b></h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div style="width: 100%;height: 25px;float: left; margin: 0% 0% 0% 0% ;padding: 0% 0% 0% 0%;"></div>
+        <div class="row col-xs-6">
+            <div class="col">
+                <div style="width: 100%;height: 25px;float: left; margin: 0% 0% 0% 0% ;padding: 0% 0% 0% 0%;color: black;font-weight: bold;"> Order</div>
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+
+
+        <div class="row col-xs-6">
+            <div class="col">
+                <label for="lfirstname">Employee</label>
+                <select class="form-control" id="employee" name="employee">
+                  <option value="" selected>Employee</option>
+                  <option value="1">Opción 1</option>
+                  <option value="2">Opción 2</option>
+                  <option value="3">Opción 3</option>
+                  <option value="4">Opción 4</option>
+              </select>
+
+
+            </div>
+            <div class="col">
+                <label for="llastname">Shipper</label>
+
+                <select class="form-control" id="Shipper" name="Shipper">
+                  <option value="" selected>Shipper</option>
+                  <option value="1">Opción 1</option>
+                  <option value="2">Opción 2</option>
+                  <option value="3">Opción 3</option>
+                  <option value="4">Opción 4</option>
+              </select>
+            </div>
+        </div>
+
+        <div class="row col-xs-12">
+            <div class="col">
+                <label for="lfirstname">Ship Name</label>
+                <input type="text" class="form-control" id="firstname" name="firstname" formControlName="firstname" placeholder="firstname">
+            </div>
+        </div>
+
+
+
+        <div class="row col-xs-6">
+            <div class="col">
+                <label for="ltitle">Ship Address</label>
+                <input type="text" class="form-control" id="title" name="title" formControlName="title" placeholder="title">
+            </div>
+            <div class="col">
+                <label for="ltitleofcourtesy">Ship City</label>
+
+                <input type="text" class="form-control" id="titleofcourtesy" name="titleofcourtesy" formControlName="titleofcourtesy" placeholder="titleofcourtesy">
+            </div>
+            <div class="col">
+                <label for="ltitleofcourtesy">Ship Country</label>
+
+                <input type="text" class="form-control" id="titleofcourtesy" name="titleofcourtesy" formControlName="titleofcourtesy" placeholder="titleofcourtesy">
+            </div>
+        </div>
+
+
+        &nbsp;
+
+        <div class="row col-xs-12">
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Order Date</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="birthdate" placeholder="Order Date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Required Date</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="hiredate" placeholder="Required Date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>Shipped Date</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="hiredate" placeholder="Shipped Date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </div>
+
+
+        <div class="row col-xs-12">
+            <div class="col">
+                <label for="laddress">Freight</label>
+                <input type="text" class="form-control" id="address" name="address" formControlName="address" placeholder="address">
+            </div>
+
+        </div>
+
+        <div style="width: 100%;height: 25px;float: left; margin: 0% 0% 0% 0% ;padding: 0% 0% 0% 0%;"></div>
+        <div class="row col-xs-6">
+            <div class="col">
+                <div style="width: 100%;height: 25px;float: left; margin: 0% 0% 0% 0% ;padding: 0% 0% 0% 0%;color: black;font-weight: bold;"> Order Details</div>
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+
+        <div class="row col-xs-12">
+            <div class="col">
+                <label for="lregion">Product</label>
+                <select class="form-control" id="Product" name="Product">
+                  <option value="" selected>Product</option>
+                  <option value="1">Opción 1</option>
+                  <option value="2">Opción 2</option>
+                  <option value="3">Opción 3</option>
+                  <option value="4">Opción 4</option>
+              </select>
+
+            </div>
+        </div>
+
+        <div class="row col-xs-12">
+            <div class="col">
+                <label for="lcountry">Unit Price</label>
+                <input type="text" class="form-control" id="country" name="country" formControlName="country" placeholder="country">
+            </div>
+            <div class="col">
+                <label for="lphone">Quantity</label>
+
+                <input type="text" class="form-control" id="phone" name="phone" formControlName="phone" placeholder="phone">
+            </div>
+            <div class="col">
+                <label for="lphone">Discount</label>
+
+                <input type="text" class="form-control" id="phone" name="phone" formControlName="phone" placeholder="phone">
+            </div>
+        </div>
+
+
+
+
+
+        <div class="row col-xs-12">
+            <div>&nbsp;
+                <input type="hidden" class="form-control" id="empid" name="empid" formControlName="empid" value="0">
+            </div>
+        </div>
+        <div class="row col-xs-12">
+            <div class="col" style=" text-align: center;">
+                <button type="button" class="btn btn-primary" mat-dialog-close="true">Cancelar</button>
+            </div>
+            <div class="col" style=" text-align: center;">
+                <button type="submit" [mat-dialog-close]="true" class="btn btn-success">Guardar</button>
+            </div>
+        </div>
+
+
+        <div class="row col-xs-12">
+            <div>&nbsp;</div>
+        </div>
+    </div>
+</form>

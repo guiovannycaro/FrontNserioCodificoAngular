@@ -1,0 +1,213 @@
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
+<div class="content-wrapper">
+    <div class="content-wrapper">
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>Employee</h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="dashboard">Home</a></li>
+                            <li class="breadcrumb-item active">Employee</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+
+            <!-- Default box -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title"></h3>
+
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+            <i class="fas fa-minus"></i>
+          </button>
+                        <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+            <i class="fas fa-times"></i>
+          </button>
+                    </div>
+                </div>
+                <div class="card-body">
+
+                </div>
+
+
+
+
+
+
+                <!-- Default box -->
+                <div class="card">
+
+                    <div class="card-body">
+                        <!--inicio_scroll-->
+                        <div class="scroll-container">
+                            <div style="    width: 10%;
+                            height: 43px;
+                            margin: 0% 0% 0% 21%;
+                            z-index: 2;
+                            float: right;
+                            position: absolute;">
+
+                                <a href="#" (click)="openAddProForm(); $event.preventDefault();" class="btn btn-primary btn-xs">
+                                    Agregar
+                                </a>
+                            </div>
+
+                            <mat-form-field>
+                                <mat-label>Filter</mat-label>
+                                <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+                            </mat-form-field>
+
+                            <div class="mat-elevation-z8">
+                                <table mat-table [dataSource]="dataSource" matSort>
+
+                                    <!-- ID Column -->
+                                    <ng-container matColumnDef="id">
+                                        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+                                        <td mat-cell *matCellDef="let area"> {{area.empid}} </td>
+                                    </ng-container>
+
+                                    <!-- Progress Column -->
+                                    <ng-container matColumnDef="lastname">
+                                        <th mat-header-cell *matHeaderCellDef mat-sort-header>lastname </th>
+                                        <td mat-cell *matCellDef="let area"> {{area.lastname}} </td>
+                                    </ng-container>
+
+                                    <!-- Name Column -->
+                                    <ng-container matColumnDef="firstname">
+                                        <th mat-header-cell *matHeaderCellDef mat-sort-header> firstname </th>
+                                        <td mat-cell *matCellDef="let area"> {{area.firstname}} </td>
+                                    </ng-container>
+
+                                    <!-- Name Column -->
+                                    <ng-container matColumnDef="title">
+                                        <th mat-header-cell *matHeaderCellDef mat-sort-header> title </th>
+                                        <td mat-cell *matCellDef="let area"> {{area.title}} </td>
+                                    </ng-container>
+
+                                    <!-- Name Column -->
+                                    <ng-container matColumnDef="titleofcourtesy">
+                                        <th mat-header-cell *matHeaderCellDef mat-sort-header> titleofcourtesy </th>
+                                        <td mat-cell *matCellDef="let area"> {{area.titleofcourtesy}} </td>
+                                    </ng-container>
+
+
+                                    <!-- Progress Column -->
+                                    <ng-container matColumnDef="birthdate">
+                                        <th mat-header-cell *matHeaderCellDef mat-sort-header>birthdate </th>
+                                        <td mat-cell *matCellDef="let area"> {{area.birthdate}} </td>
+                                    </ng-container>
+
+                                    <!-- Name Column -->
+                                    <ng-container matColumnDef="hiredate">
+                                        <th mat-header-cell *matHeaderCellDef mat-sort-header> hiredate </th>
+                                        <td mat-cell *matCellDef="let area"> {{area.hiredate}} </td>
+                                    </ng-container>
+
+
+
+                                    <!-- Progress Column -->
+                                    <ng-container matColumnDef="address">
+                                        <th mat-header-cell *matHeaderCellDef mat-sort-header>address </th>
+                                        <td mat-cell *matCellDef="let area"> {{area.address}} </td>
+                                    </ng-container>
+
+                                    <!-- Name Column -->
+                                    <ng-container matColumnDef="city">
+                                        <th mat-header-cell *matHeaderCellDef mat-sort-header> city </th>
+                                        <td mat-cell *matCellDef="let area"> {{area.city}} </td>
+                                    </ng-container>
+
+
+                                    <!-- Progress Column -->
+                                    <ng-container matColumnDef="region">
+                                        <th mat-header-cell *matHeaderCellDef mat-sort-header>region</th>
+                                        <td mat-cell *matCellDef="let area"> {{area.region}} </td>
+                                    </ng-container>
+
+                                    <!-- Name Column -->
+                                    <ng-container matColumnDef="postalcode">
+                                        <th mat-header-cell *matHeaderCellDef mat-sort-header> postalcode </th>
+                                        <td mat-cell *matCellDef="let area"> {{area.postalcode}} </td>
+                                    </ng-container>
+
+
+                                    <ng-container matColumnDef="country">
+                                        <th mat-header-cell *matHeaderCellDef mat-sort-header>country</th>
+                                        <td mat-cell *matCellDef="let area"> {{area.country}} </td>
+                                    </ng-container>
+
+                                    <!-- Name Column -->
+                                    <ng-container matColumnDef="phone">
+                                        <th mat-header-cell *matHeaderCellDef mat-sort-header> phone </th>
+                                        <td mat-cell *matCellDef="let area"> {{area.phone}} </td>
+                                    </ng-container>
+
+                                    <ng-container matColumnDef="mgrid">
+                                        <th mat-header-cell *matHeaderCellDef mat-sort-header> mgrid </th>
+                                        <td mat-cell *matCellDef="let area"> {{area.mgrid}} </td>
+                                    </ng-container>
+
+                                    <!-- Name Column -->
+                                    <ng-container matColumnDef="Acciones">
+                                        <th mat-header-cell *matHeaderCellDef style="width: 40%;"> Acciones </th>
+                                        <td mat-cell *matCellDef="let area">
+                                            <a href="#" (click)="openEditProForm(area.empid); $event.preventDefault();" class="btn btn-primary btn-xs">
+                                          Editar
+                                      </a> -
+                                            <button (click)="openDropProForm(area.empid); $event.preventDefault();" class="btn btn-danger btn-xs">
+                                          Eliminar
+                                      </button>
+
+
+                                        </td>
+                                    </ng-container>
+
+
+                                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                                    <!-- Row shown when there is no matching data. -->
+                                    <tr class="mat-row" *matNoDataRow>
+                                        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+                                    </tr>
+                                </table>
+
+                                <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of areas"></mat-paginator>
+
+                            </div>
+                        </div>
+                        <!--fin_scroll-->
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+
+                    </div>
+                    <!-- /.card-footer-->
+                </div>
+                <!-- /.card -->
+
+
+
+                <div class="card-footer">
+
+                </div>
+                <!-- /.card-footer-->
+            </div>
+            <!-- /.card -->
+
+        </section>
+    </div>
+
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,48 @@
+<table>
+    <tr *ngFor="let i of shipperssar">
+        <td>
+            <form (ngSubmit)="onSubmit()">
+
+                <div style="width: 80% !important;MARGIN: 0% 5% 0% 10%;">
+
+                    <div class="row col-xs-12">
+                        <h1 style="margin: 3% 0% 0% 20% ;text-align: center;"><b> Editar Category</b></h1>
+                    </div>
+
+                    <div class="row col-xs-6">
+                        <div class="col">
+                            <label for="lcompanyname">companyname</label>
+                            <input type="text" class="form-control" id="companyname" name="companyname" [(ngModel)]="i.companyname" placeholder="Nombre">
+                        </div>
+                        <div class="col">
+                            <label for="lphone">phone</label>
+
+                            <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="i.phone" placeholder="phone">
+                        </div>
+                    </div>
+
+
+
+                    <div class="row col-xs-12">
+                        <div>&nbsp;
+                            <input type="hidden" class="form-control" id="shipperid" name="shipperid" [(ngModel)]="i.shipperid">
+                        </div>
+                    </div>
+                    <div class="row col-xs-12">
+                        <div class="col" style=" text-align: center;">
+                            <button type="button" class="btn btn-primary" mat-dialog-close="true">Cancelar</button>
+                        </div>
+                        <div class="col" style=" text-align: center;">
+                            <button type="submit" [mat-dialog-close]="true" class="btn btn-success">Guardar</button>
+                        </div>
+                    </div>
+
+
+                    <div class="row col-xs-12">
+                        <div>&nbsp;</div>
+                    </div>
+                </div>
+            </form>
+        </td>
+    </tr>
+</table>

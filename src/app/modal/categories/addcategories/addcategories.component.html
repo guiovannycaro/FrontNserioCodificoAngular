@@ -1,0 +1,43 @@
+<form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
+
+    <div style="width: 80% !important;MARGIN: 0% 5% 0% 10%;">
+
+        <div class="row col-xs-12">
+            <h1 style="margin: 3% 0% 0% 20% ;text-align: center;"><b> Nueva Categoria</b></h1>
+        </div>
+
+        <div class="row col-xs-6">
+            <div class="col">
+                <label for="lnombre">Nombre</label>
+                <input type="text" class="form-control" id="categoryname" name="categoryname" formControlName="categoryname" placeholder="Nombre">
+            </div>
+            <div class="col">
+                <label for="ldescripcion">Descripcion</label>
+
+                <input type="text" class="form-control" id="description" name="description" formControlName="description" placeholder="Descripcion">
+            </div>
+        </div>
+
+
+
+
+        <div class="row col-xs-12">
+            <div>&nbsp;
+                <input type="hidden" class="form-control" id="categoryid" name="categoryid" formControlName="categoryid" value="0">
+            </div>
+        </div>
+        <div class="row col-xs-12">
+            <div class="col" style=" text-align: center;">
+                <button type="button" class="btn btn-primary" mat-dialog-close="true">Cancelar</button>
+            </div>
+            <div class="col" style=" text-align: center;">
+                <button type="submit" [mat-dialog-close]="true" class="btn btn-success">Guardar</button>
+            </div>
+        </div>
+
+
+        <div class="row col-xs-12">
+            <div>&nbsp;</div>
+        </div>
+    </div>
+</form>

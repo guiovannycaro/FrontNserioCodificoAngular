@@ -1,0 +1,112 @@
+<form [formGroup]="suppliersForm" (ngSubmit)="onSubmit()">
+
+    <div style="width: 80% !important;MARGIN: 0% 5% 0% 10%;">
+
+        <div class="row col-xs-12">
+            <h1 style="margin: 3% 0% 0% 20% ;text-align: center;"><b> Nuevo Supplier</b></h1>
+        </div>
+
+        <div class="row col-xs-6">
+            <div class="col">
+                <label for="lcompanyname">companyname</label>
+                <input type="text" class="form-control" id="companyname" name="companyname" formControlName="companyname" placeholder="companyname">
+            </div>
+            <div class="col">
+                <label for="lcontactname">contactname</label>
+
+                <input type="text" class="form-control" id="contactname" name="contactname" formControlName="contactname" placeholder="contactname">
+            </div>
+        </div>
+
+        <div class="row col-xs-6">
+            <div class="col">
+                <label for="contacttitle">contacttitle</label>
+                <input type="text" class="form-control" id="contacttitle" name="contacttitle" formControlName="contacttitle" placeholder="contacttitle">
+            </div>
+            <div class="col">
+                &nbsp;
+            </div>
+        </div>
+
+
+        <div class="row col-xs-6">
+            <div class="col">
+                <label for="laddress">address</label>
+                <input type="text" class="form-control" id="address" name="address" formControlName="address" placeholder="address">
+            </div>
+            <div class="col">
+                <label for="lcity">city</label>
+
+                <input type="text" class="form-control" id="city" name="city" formControlName="city" placeholder="city">
+            </div>
+        </div>
+
+
+        &nbsp;
+
+        <div class="row col-xs-6">
+            <div class="col">
+                <label for="lregion">region</label>
+
+                <input type="text" class="form-control" id="region" name="region" formControlName="region" placeholder="region">
+            </div>
+            <div class="col">
+                <label for="lpostalcode">postalcode</label>
+
+                <input type="text" class="form-control" id="postalcode" name="postalcode" formControlName="postalcode" placeholder="postalcode">
+            </div>
+        </div>
+
+
+        <div class="row col-xs-6">
+            <div class="col">
+                <label for="lcountry
+            
+            
+            ">country</label>
+                <input type="text" class="form-control" id="country" name="country" formControlName="country" placeholder="country">
+            </div>
+            <div class="col">
+                <label for="lphone">phone</label>
+
+                <input type="text" class="form-control" id="phone" name="phone" formControlName="phone" placeholder="phone">
+            </div>
+        </div>
+
+
+        <div class="row col-xs-6">
+            <div class="col">
+                <label for="lregion">region</label>
+                <input type="text" class="form-control" id="region" name="region" formControlName="region" placeholder="region">
+            </div>
+            <div class="col">
+                <label for="lfax">fax</label>
+
+                <input type="text" class="form-control" id="fax" name="fax" formControlName="fax" placeholder="fax">
+            </div>
+        </div>
+
+
+
+
+
+        <div class="row col-xs-12">
+            <div>&nbsp;
+                <input type="hidden" class="form-control" id="supplierid" name="supplierid" formControlName="supplierid" value="0">
+            </div>
+        </div>
+        <div class="row col-xs-12">
+            <div class="col" style=" text-align: center;">
+                <button type="button" class="btn btn-primary" mat-dialog-close="true">Cancelar</button>
+            </div>
+            <div class="col" style=" text-align: center;">
+                <button type="submit" [mat-dialog-close]="true" class="btn btn-success">Guardar</button>
+            </div>
+        </div>
+
+
+        <div class="row col-xs-12">
+            <div>&nbsp;</div>
+        </div>
+    </div>
+</form>

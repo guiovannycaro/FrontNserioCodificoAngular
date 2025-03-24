@@ -1,0 +1,12 @@
+.mat-dialog-container {
+    width: auto !important;
+    max-width: 700vw;
+    /* Ajusta según lo que necesites */
+}
+
+.cdk-overlay-pane.mat-mdc-dialog-panel {
+    max-width: 80vw;
+    /* O el tamaño que necesites */
+    min-width: 400px;
+    /* O el tamaño mínimo deseado */
+}

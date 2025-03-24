@@ -1,0 +1,76 @@
+<table>
+    <tr *ngFor="let i of productssar">
+        <td>
+            <form (ngSubmit)="onSubmit()">
+
+                <div style="width: 80% !important;MARGIN: 0% 5% 0% 10%;">
+
+                    <div class="row col-xs-12">
+                        <h1 style="margin: 3% 0% 0% 20% ;text-align: center;"><b> Editar Products</b></h1>
+                    </div>
+
+                    <div class="row col-xs-6">
+                        <div class="col">
+                            <label for="lproductname">productname</label>
+                            <input type="text" class="form-control" id="productname" name="productname" [(ngModel)]="i.productname" placeholder="productname">
+                        </div>
+                        <div class="col">
+                            <label for="ldescripcion">categoryid</label>
+
+                            <input type="text" class="form-control" id="categoryid" name="categoryid" [(ngModel)]="i.categoryid" placeholder="categoryid">
+                        </div>
+                    </div>
+
+                    <div class="row col-xs-6">
+                        <div class="col">
+                            <label for="lsupplierid">supplierid</label>
+                            <input type="text" class="form-control" id="supplierid" name="supplierid" [(ngModel)]="i.supplierid" placeholder="supplierid">
+                        </div>
+                        <div class="col">
+                            <label for="lunitprice">unitprice</label>
+
+                            <input type="text" class="form-control" id="unitprice" name="unitprice" [(ngModel)]="i.unitprice" placeholder="unitprice">
+                        </div>
+                    </div>
+
+                    <div class="row col-xs-6">
+                        <div class="col">
+                            <label for="ldiscontinued">discontinued</label>
+                            <input type="text" class="form-control" id="discontinued" name="discontinued" [(ngModel)]="i.discontinued" placeholder="discontinued">
+                        </div>
+                        <div class="col">
+                            &nbsp;
+                        </div>
+
+
+
+                        <div class="row col-xs-12">
+                            <div>&nbsp;
+                                <input type="hidden" class="form-control" id="categoryid" name="categoryid" [(ngModel)]="i.productid">
+                            </div>
+
+                            <div>&nbsp;
+
+                            </div>
+                        </div>
+
+
+                        <div class="row col-xs-12">
+                            <div class="col" style=" text-align: center;">
+                                <button type="button" class="btn btn-primary" mat-dialog-close="true">Cancelar</button>
+                            </div>
+                            <div class="col" style=" text-align: center;">
+                                <button type="submit" [mat-dialog-close]="true" class="btn btn-success">Guardar</button>
+                            </div>
+                        </div>
+
+
+                        <div class="row col-xs-12">
+                            <div>&nbsp;</div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </td>
+    </tr>
+</table>

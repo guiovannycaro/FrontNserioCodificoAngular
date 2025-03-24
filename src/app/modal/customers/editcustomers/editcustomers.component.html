@@ -1,0 +1,104 @@
+<table>
+    <tr *ngFor="let i of customerssar">
+        <td>
+            <form (ngSubmit)="onSubmit()">
+
+                <div style="width: 80% !important;MARGIN: 0% 5% 0% 10%;">
+
+                    <div class="row col-xs-12">
+                        <h1 style="margin: 3% 0% 0% 20% ;text-align: center;"><b> Editar Customer</b></h1>
+                    </div>
+
+                    <div class="row col-xs-6">
+                        <div class="col">
+                            <label for="lcompanyname">companyname</label>
+                            <input type="text" class="form-control" id="companyname" name="companyname" [(ngModel)]="i.companyname" placeholder="companyname">
+                        </div>
+                        <div class="col">
+                            <label for="lcontactname">contactname</label>
+
+                            <input type="text" class="form-control" id="contactname" name="contactname" [(ngModel)]="i.contactname" placeholder="contactname">
+                        </div>
+                    </div>
+
+
+                    <div class="row col-xs-6">
+                        <div class="col">
+                            <label for="lcontacttitle">contacttitle</label>
+                            <input type="text" class="form-control" id="contacttitle" name="contacttitle" [(ngModel)]="i.contacttitle" placeholder="contacttitle">
+                        </div>
+                        <div class="col">
+                            <label for="laddress">address</label>
+
+                            <input type="text" class="form-control" id="address" name="address" [(ngModel)]="i.address" placeholder="address">
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="row col-xs-6">
+                        <div class="col">
+                            <label for="lcity">city</label>
+                            <input type="text" class="form-control" id="city" name="city" [(ngModel)]="i.city" placeholder="city">
+                        </div>
+                        <div class="col">
+                            <label for="lregion">region</label>
+
+                            <input type="text" class="form-control" id="region" name="region" [(ngModel)]="i.region" placeholder="region">
+                        </div>
+                    </div>
+
+
+                    <div class="row col-xs-6">
+                        <div class="col">
+                            <label for="lpostalcode
+              
+              
+              ">postalcode</label>
+                            <input type="text" class="form-control" id="postalcode" name="postalcode" [(ngModel)]="i.postalcode" placeholder="postalcode">
+                        </div>
+                        <div class="col">
+                            <label for="lcountry">country</label>
+
+                            <input type="text" class="form-control" id="country" name="country" [(ngModel)]="i.country" placeholder="country">
+                        </div>
+                    </div>
+
+
+                    <div class="row col-xs-6">
+                        <div class="col">
+                            <label for="lphone">phone</label>
+                            <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="i.phone" placeholder="phone">
+                        </div>
+                        <div class="col">
+                            <label for="lfax">fax</label>
+
+                            <input type="text" class="form-control" id="fax" name="fax" [(ngModel)]="i.fax" placeholder="fax">
+                        </div>
+                    </div>
+
+
+                    <div class="row col-xs-12">
+                        <div>&nbsp;
+                            <input type="hidden" class="form-control" id="custid" name="custid" [(ngModel)]="i.custid" value="0">
+                        </div>
+                    </div>
+                    <div class="row col-xs-12">
+                        <div class="col" style=" text-align: center;">
+                            <button type="button" class="btn btn-primary" mat-dialog-close="true">Cancelar</button>
+                        </div>
+                        <div class="col" style=" text-align: center;">
+                            <button type="submit" [mat-dialog-close]="true" class="btn btn-success">Guardar</button>
+                        </div>
+                    </div>
+
+
+                    <div class="row col-xs-12">
+                        <div>&nbsp;</div>
+                    </div>
+                </div>
+            </form>
+        </td>
+    </tr>
+</table>

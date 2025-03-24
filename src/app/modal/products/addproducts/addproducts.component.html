@@ -1,0 +1,65 @@
+<form [formGroup]="productsForm" (ngSubmit)="onSubmit()">
+
+    <div style="width: 80% !important;MARGIN: 0% 5% 0% 10%;">
+
+        <div class="row col-xs-12">
+            <h1 style="margin: 3% 0% 0% 20% ;text-align: center;"><b> Nueva Categoria</b></h1>
+        </div>
+
+        <div class="row col-xs-6">
+            <div class="col">
+                <label for="lnombre">Nombre</label>
+                <input type="text" class="form-control" id="productname" name="productname" formControlName="productname" placeholder="Nombre">
+            </div>
+            <div class="col">
+                <label for="ldescripcion">supplierid</label>
+
+                <input type="text" class="form-control" id="supplierid" name="supplierid" formControlName="supplierid" placeholder="supplierid">
+            </div>
+        </div>
+
+
+        <div class="row col-xs-6">
+            <div class="col">
+                <label for="lnombre">categoryid</label>
+                <input type="text" class="form-control" id="categoryid" name="categoryid" formControlName="categoryid" placeholder="categoryid">
+            </div>
+            <div class="col">
+                <label for="ldescripcion">unitprice</label>
+
+                <input type="text" class="form-control" id="unitprice" name="unitprice" formControlName="unitprice" placeholder="unitprice">
+            </div>
+        </div>
+
+
+
+        <div class="row col-xs-6">
+            <div class="col">
+                <label for="lnombre">discontinued</label>
+                <input type="text" class="form-control" id="discontinued" name="discontinued" formControlName="discontinued" placeholder="discontinued">
+            </div>
+            <div class="col">
+                &nbsp;
+            </div>
+        </div>
+
+        <div class="row col-xs-12">
+            <div>&nbsp;
+                <input type="hidden" class="form-control" id="productid" name="productid" formControlName="productid" value="0">
+            </div>
+        </div>
+        <div class="row col-xs-12">
+            <div class="col" style=" text-align: center;">
+                <button type="button" class="btn btn-primary" mat-dialog-close="true">Cancelar</button>
+            </div>
+            <div class="col" style=" text-align: center;">
+                <button type="submit" [mat-dialog-close]="true" class="btn btn-success">Guardar</button>
+            </div>
+        </div>
+
+
+        <div class="row col-xs-12">
+            <div>&nbsp;</div>
+        </div>
+    </div>
+</form>

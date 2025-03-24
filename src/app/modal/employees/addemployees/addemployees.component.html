@@ -1,0 +1,128 @@
+<form [formGroup]="employeesForm" (ngSubmit)="onSubmit()">
+
+    <div style="width: 80% !important;MARGIN: 0% 5% 0% 10%;">
+
+        <div class="row col-xs-12">
+            <h1 style="margin: 3% 0% 0% 20% ;text-align: center;"><b> Nuevo Customer</b></h1>
+        </div>
+
+        <div class="row col-xs-6">
+            <div class="col">
+                <label for="lfirstname">firstname</label>
+                <input type="text" class="form-control" id="firstname" name="firstname" formControlName="firstname" placeholder="firstname">
+            </div>
+            <div class="col">
+                <label for="llastname">lastname</label>
+
+                <input type="text" class="form-control" id="lastname" name="lastname" formControlName="lastname" placeholder="lastname">
+            </div>
+        </div>
+
+
+        <div class="row col-xs-6">
+            <div class="col">
+                <label for="ltitle">title</label>
+                <input type="text" class="form-control" id="title" name="title" formControlName="title" placeholder="title">
+            </div>
+            <div class="col">
+                <label for="ltitleofcourtesy">titleofcourtesy</label>
+
+                <input type="text" class="form-control" id="titleofcourtesy" name="titleofcourtesy" formControlName="titleofcourtesy" placeholder="titleofcourtesy">
+            </div>
+        </div>
+
+
+        &nbsp;
+
+        <div class="row col-xs-6">
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>birthdate</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="birthdate" placeholder="Seleccione una fecha">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill">
+                    <mat-label>hiredate</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="hiredate" placeholder="Seleccione una fecha">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </div>
+
+
+        <div class="row col-xs-6">
+            <div class="col">
+                <label for="laddress
+              
+              
+              ">address</label>
+                <input type="text" class="form-control" id="address" name="address" formControlName="address" placeholder="address">
+            </div>
+            <div class="col">
+                <label for="lcity">city</label>
+
+                <input type="text" class="form-control" id="city" name="city" formControlName="city" placeholder="city">
+            </div>
+        </div>
+
+
+        <div class="row col-xs-6">
+            <div class="col">
+                <label for="lregion">region</label>
+                <input type="text" class="form-control" id="region" name="region" formControlName="region" placeholder="region">
+            </div>
+            <div class="col">
+                <label for="lpostalcode">postalcode</label>
+
+                <input type="text" class="form-control" id="postalcode" name="postalcode" formControlName="postalcode" placeholder="postalcode">
+            </div>
+        </div>
+
+        <div class="row col-xs-6">
+            <div class="col">
+                <label for="lcountry">country</label>
+                <input type="text" class="form-control" id="country" name="country" formControlName="country" placeholder="country">
+            </div>
+            <div class="col">
+                <label for="lphone">phone</label>
+
+                <input type="text" class="form-control" id="phone" name="phone" formControlName="phone" placeholder="phone">
+            </div>
+        </div>
+
+        <div class="row col-xs-6">
+            <div class="col">
+                <label for="lmgrid">mgrid</label>
+                <input type="number" class="form-control" id="mgrid" name="mgrid" formControlName="mgrid" placeholder="mgrid">
+            </div>
+            <div class="col">
+                &nbsp;
+            </div>
+        </div>
+
+
+
+        <div class="row col-xs-12">
+            <div>&nbsp;
+                <input type="hidden" class="form-control" id="empid" name="empid" formControlName="empid" value="0">
+            </div>
+        </div>
+        <div class="row col-xs-12">
+            <div class="col" style=" text-align: center;">
+                <button type="button" class="btn btn-primary" mat-dialog-close="true">Cancelar</button>
+            </div>
+            <div class="col" style=" text-align: center;">
+                <button type="submit" [mat-dialog-close]="true" class="btn btn-success">Guardar</button>
+            </div>
+        </div>
+
+
+        <div class="row col-xs-12">
+            <div>&nbsp;</div>
+        </div>
+    </div>
+</form>

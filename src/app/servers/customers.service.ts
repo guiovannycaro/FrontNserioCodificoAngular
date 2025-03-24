@@ -82,4 +82,18 @@ export class CustomersService {
         return response;
        }
 
+
+       getCustomerName(data:any): Observable<any>{
+        console.log("parametro a enviar " + data)
+        let direccion = this.baseUrl + "Customers/BuscarNombreCustomersById?dato=" + data;
+
+        console.log("direccion " + direccion)
+        let response = this.http.get<any>(direccion).pipe(
+          tap((response: any) => console.log(" Respuesta del servidor:", response))
+        );
+        console.log(response);
+        return response;
+
+       }
+
 }

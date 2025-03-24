@@ -18,7 +18,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxPaginationModule } from 'ngx-pagination';
-
+import { DatePipe } from '@angular/common';
 
 
 import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component';
@@ -112,7 +112,7 @@ import { AddNewPredictionComponent } from './modal/predictions/add-new-predictio
     MatInputModule
 
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

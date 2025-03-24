@@ -7,6 +7,7 @@ import { tap,map , catchError} from 'rxjs/operators';
 
 import {ResponceI} from '../modelos/ResponceI';
 import {PredictionView} from '../modelos/predictioview';
+import { NOrderDetail } from '../modelos/norderDetail';
 
 @Injectable({
   providedIn: 'root'
@@ -35,5 +36,16 @@ export class PredictionsService {
 }
 
 
+
+
+
+createNewOrdenDetails(areas: NOrderDetail): Observable<any>{
+
+    let direccion = this.baseUrl + "Prediction/createNewOrdenDetails";
+    let response = this.http.post<any>(direccion,areas,this.httpOptions);
+
+    return response;
+
+   }
 
 }
